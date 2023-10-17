@@ -13,6 +13,7 @@ Any repo configured with GitHub Pages within the ApeWorX organization will be pu
    - Copy the `./docs` folder from this reference repo to your repo.
    - Copy the `./build_docs.py` file from this reference repo to your repo.
    - Copy the `.github/workflows/docs.yaml` file from this reference repo to your repo.
+   - Create a `gh-pages` branch.
    - Edit lines 35 and 43 from `.github/workflows/docs.yaml` with your repo name
 
 3. **Write User Guides and Method Docs:**

@@ -4,12 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creating Documentation in the Ape Ecosystem &mdash; ape  documentation</title>
+  <title>ape.api &mdash; ape  documentation</title>
       <link rel="stylesheet" href="/ape/latest/_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="/ape/latest/_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="/ape/latest/_static/custom.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="canonical" href="/ape/userguides/quickstart.html" />
+    <link rel="canonical" href="/ape/methoddocs/api-example.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -26,8 +26,7 @@
       var PROJECT = "ape";
   </script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Documentation-Name-Here" href="../index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -120,14 +119,8 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">User Guides</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating Documentation in the Ape Ecosystem</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#features">Features:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#syntax-guide-for-python-sphinx">Syntax Guide for Python Sphinx</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userguides/quickstart.html">Creating Documentation in the Ape Ecosystem</a></li>
 </ul>
 
         </div>
@@ -144,9 +137,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Creating Documentation in the Ape Ecosystem</li>
+      <li class="breadcrumb-item active">ape.api</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/userguides/quickstart.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/methoddocs/api-example.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -154,76 +147,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="creating-documentation-in-the-ape-ecosystem">
-<h1>Creating Documentation in the Ape Ecosystem<a class="headerlink" href="#creating-documentation-in-the-ape-ecosystem" title="Permalink to this heading"></a></h1>
-<p>If you’re working on a project within the Ape ecosystem follow the steps below, they will set you up with a standard ape template for documentation and deploy them in a <a class="reference external" href="https://pages.github.com/">GitHub Pages</a> for your repo.</p>
-<p>Any repo configured with GitHub Pages within the ApeWorX organization will be published automatically at <code class="docutils literal notranslate"><span class="pre">https://docs.apeworx.io/your_repo_name_here</span></code>.</p>
-<section id="quick-start">
-<h2>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p><strong>Set Up Repository:</strong></p>
-<ul class="simple">
-<li><p>Create a new repo under the ApeWorX organization if one doesn’t exist for your project.</p></li>
-</ul>
-</li>
-<li><p><strong>Copy Necessary Files and Folders:</strong></p>
-<ul class="simple">
-<li><p>Reference repo: <a class="reference external" href="https://github.com/ApeWorX/docs-template">https://github.com/ApeWorX/docs-template</a></p></li>
-<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">./docs</span></code> folder from the reference repo to your repo.</p></li>
-<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">./build_docs.py</span></code> file from the reference repo to your repo.</p></li>
-<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">.github/workflows/docs.yaml</span></code> file from the reference repo to your repo.</p></li>
-<li><p>Edit lines 35 and 43 from <code class="docutils literal notranslate"><span class="pre">.github/workflows/docs.yaml</span></code> with your repo name</p></li>
-</ul>
-</li>
-<li><p><strong>Write User Guides and Method Docs:</strong></p>
-<ul class="simple">
-<li><p>Add new user guides to <code class="docutils literal notranslate"><span class="pre">./docs/userguides</span></code>. The sidebar will be autogenerated and display each guide’s first title.</p></li>
-<li><p>Edit <code class="docutils literal notranslate"><span class="pre">docs/index.md</span></code> to adjust the sidebar table-of-content.</p></li>
-<li><p>To generate documentation from docstrings in your code, use <code class="docutils literal notranslate"><span class="pre">./docs/methoddocs</span></code> and adhere to the provided <a class="reference external" href="#Syntax-Guide-for-Python-Sphinx">syntax guide</a>.</p></li>
-</ul>
-</li>
-<li><p><strong>Generate and Publish Documentation:</strong></p>
-<ul class="simple">
-<li><p>Create a <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p></li>
-<li><p>Create a new release to create a <code class="docutils literal notranslate"><span class="pre">stable</span></code> docs version.</p></li>
-<li><p>Push your changes to the repo. Your documentation will be automatically published to <code class="docutils literal notranslate"><span class="pre">https://docs.apeworx.io/repo_name_here</span></code>.</p></li>
-</ul>
-</li>
-</ol>
+  <section id="ape-api">
+<h1>ape.api<a class="headerlink" href="#ape-api" title="Permalink to this heading"></a></h1>
+<section id="accounts">
+<h2>Accounts<a class="headerlink" href="#accounts" title="Permalink to this heading"></a></h2>
 </section>
-<section id="features">
-<h2>Features:<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p><strong>Autogenerated Sidebar:</strong> The sidebar is autogenerated for all user guides and methods and will display the first title from each user guide. Ensure the first title accurately represents the content of the guide.</p></li>
-<li><p><strong>Repo README is the default landing page:</strong> Your repo <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file will automatically become a user guide titled “Quickstart”.</p></li>
-</ul>
+<section id="address">
+<h2>Address<a class="headerlink" href="#address" title="Permalink to this heading"></a></h2>
 </section>
-<section id="best-practices">
-<h2>Best Practices:<a class="headerlink" href="#best-practices" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p><strong>Keep Documentation Updated:</strong> Regularly update the documentation to reflect changes and updates in the project.</p></li>
-<li><p><strong>Be Clear and Concise:</strong> Write documentation that is clear, concise, and easy to understand for all team members. Remember that most readers have less context about what you are documenting.</p></li>
-<li><p><strong>Use Descriptive Titles:</strong> The first title in your user guides will be displayed in the autogenerated sidebar, so ensure it is descriptive and accurately represents the guide’s content.</p></li>
-</ul>
-<p>By following these guidelines, you will ensure that the documentation for your project is consistent, user-friendly, and easily accessible to all team members within the Ape ecosystem.</p>
+<section id="compiler">
+<h2>Compiler<a class="headerlink" href="#compiler" title="Permalink to this heading"></a></h2>
 </section>
-<section id="syntax-guide-for-python-sphinx">
-<h2>Syntax Guide for Python Sphinx<a class="headerlink" href="#syntax-guide-for-python-sphinx" title="Permalink to this heading"></a></h2>
-<p>To document Python modules using Sphinx, you can use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">automodule::</span></code> directive like this:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> silverback.application
-    <span class="nc">:members:</span>
-    <span class="nc">:show-inheritance:</span>
-</pre></div>
-</div>
+<section id="config">
+<h2>Config<a class="headerlink" href="#config" title="Permalink to this heading"></a></h2>
+</section>
+<section id="convert">
+<h2>Convert<a class="headerlink" href="#convert" title="Permalink to this heading"></a></h2>
+</section>
+<section id="explorers">
+<h2>Explorers<a class="headerlink" href="#explorers" title="Permalink to this heading"></a></h2>
+</section>
+<section id="networks">
+<h2>Networks<a class="headerlink" href="#networks" title="Permalink to this heading"></a></h2>
+</section>
+<section id="projects">
+<h2>Projects<a class="headerlink" href="#projects" title="Permalink to this heading"></a></h2>
+</section>
+<section id="providers">
+<h2>Providers<a class="headerlink" href="#providers" title="Permalink to this heading"></a></h2>
+</section>
+<section id="transactions">
+<h2>Transactions<a class="headerlink" href="#transactions" title="Permalink to this heading"></a></h2>
+</section>
+<section id="query">
+<h2>Query<a class="headerlink" href="#query" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Documentation-Name-Here" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
+          <footer>
 
   <hr/>
 

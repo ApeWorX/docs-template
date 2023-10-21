@@ -10,7 +10,7 @@ Any repo configured with GitHub Pages within the ApeWorX organization will be pu
    - Create a new repo under the ApeWorX organization if one doesn’t exist for your project.
 
 2. **Copy Necessary Files and Folders:**
-   - Reference repo: https://github.com/ApeWorX/docs-template
+   - Reference repo: [https://github.com/ApeWorX/docs-template](https://github.com/ApeWorX/docs-template)
    - Copy the `./docs` folder from the reference repo to your repo.
    - Copy the `./build_docs.py` file from the reference repo to your repo.
    - Copy the `.github/workflows/docs.yaml` file from the reference repo to your repo.

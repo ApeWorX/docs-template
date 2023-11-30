@@ -14,7 +14,6 @@ Any repo configured with GitHub Pages within the ApeWorX organization will be pu
    - Copy the `./docs` folder from the reference repo to your repo.
    - Copy the `./build_docs.py` file from the reference repo to your repo.
    - Copy the `.github/workflows/docs.yaml` file from the reference repo to your repo.
-   - Copy the `./docs-requirements.txt` file from the reference repo to your repo.
    - Edit lines 35 and 43 from `.github/workflows/docs.yaml` with your repo name
 
 4. **Write User Guides and Method Docs:**

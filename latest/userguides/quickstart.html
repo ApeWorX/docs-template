@@ -187,7 +187,13 @@
 <li><p>To generate documentation from docstrings in your code, use <code class="docutils literal notranslate"><span class="pre">./docs/methoddocs</span></code> and adhere to the provided <a class="reference external" href="#Syntax-Guide-for-Python-Sphinx">syntax guide</a>.</p></li>
 </ul>
 </li>
-<li><p><strong>Generate and Publish Documentation:</strong></p>
+<li><p><strong>Preview the Documentation Locally (optional)</strong></p>
+<ul class="simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">build_docs.py</span></code> to build the documentation website from source files.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span> <span class="pre">--directory</span> <span class="pre">&quot;docs/_build/&quot;</span> <span class="pre">--bind</span> <span class="pre">127.0.0.1</span> <span class="pre">1337</span></code> to serve the documentation locally.</p></li>
+</ul>
+</li>
+<li><p><strong>Publish Documentation:</strong></p>
 <ul class="simple">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p></li>
 <li><p>Create a new release to create a <code class="docutils literal notranslate"><span class="pre">stable</span></code> docs version.</p></li>

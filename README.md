@@ -23,9 +23,10 @@ Any repo configured with GitHub Pages within the ApeWorX organization will be pu
    - To generate documentation from docstrings in your code, use `./docs/methoddocs` and adhere to the provided [syntax guide](#Syntax-Guide-for-Python-Sphinx).
   
 5. **Preview the Documentation Locally (optional)**
-
+   - Install documentation dependencies with `pip install -e .'[doc]'`
    - Run `python build_docs.py` to build the documentation website from source files.
    - Run `python -m http.server --directory "docs/_build/" --bind 127.0.0.1 1337` to serve the documentation locally.
+   - Documentation can be locally previewed at `127.0.0.1:1337` inside the `ape` folder.
 
 6. **Publish Documentation:**
    - Create a `gh-pages` branch.

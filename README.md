@@ -1,3 +1,5 @@
+**Deprecated by [sphinx-ape](https://github.com/ApeWorX/sphinx-ape)**
+
 # Creating Documentation in the Ape Ecosystem
 
 If you're working on a project within the Ape ecosystem follow the steps below, they will set you up with a standard ape template for documentation and deploy them in a [GitHub Pages](https://pages.github.com/) for your repo.
